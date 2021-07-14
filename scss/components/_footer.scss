@@ -1,0 +1,79 @@
+@use '../custom' as *;
+@use '../components/mixin' as *;
+
+footer {
+    @include media-breakpoint-up(md) {
+        .container {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+    }
+
+    @include media-breakpoint-up(sm) {
+        .container .menu {
+            flex-direction: column;
+        }
+        .container .services {
+            position: absolute;
+            left: 60%;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        .container .menu {
+            flex-direction: row;
+        }
+        .container .services {
+            position: initial;
+            left: initial;
+        }
+    }
+    ul {
+        list-style-type: none;
+        padding: 0rem;
+        margin-top: 0;
+    }
+    li {
+        a {
+            font-family: "Nunito Sans";
+            color: #778aa3;
+            font-size: 0.75rem;
+            text-decoration: none;
+            font-weight: initial;
+        }
+    }
+    a {
+        font-family: "Nunito Sans";
+        color: #000000;
+        font-size: 0.85rem;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    .social-media span {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+    }
+
+    .social-media #Facebook span {
+        background-image: url("/assets/images/footer/Facebook.svg");
+    }
+
+    .social-media #Facebook:hover span {
+        background-image: url("/assets/images/footer/Facebook_hover.svg");
+    }
+    .social-media #Twitter span {
+        background-image: url("/assets/images/footer/Twitter.svg");
+    }
+
+    .social-media #Twitter:hover span {
+        background-image: url("/assets/images/footer/Twitter_hover.svg");
+    }
+    .social-media #Linkedin span {
+        background-image: url("/assets/images/footer/Linkedin.svg");
+    }
+
+    .social-media #Linkedin:hover span {
+        background-image: url("/assets/images/footer/Linkedin_hover.svg");
+    }
+}

@@ -1,0 +1,29 @@
+@use '../custom' as *;
+
+@mixin paragraph-style {
+    color: $paragraph-color;
+    text-align: start;
+    font-size: 0.875rem;
+
+    @include media-breakpoint-up(sm) {
+        font-size: 1.25rem;
+    }
+}
+
+@mixin button-style {
+    box-shadow: 0 2px 9px 0 rgb(0 135 230 / 60%);
+    font-weight: $font-weight-normal;
+    height: 4rem;
+    width: 15rem;
+    color: $white;
+}
+
+@mixin padding-x($value) {
+    padding-left: $value;
+    padding-right: $value;
+}
+
+@mixin margin-y($value) {
+    margin-top: $value;
+    margin-bottom: $value;
+}

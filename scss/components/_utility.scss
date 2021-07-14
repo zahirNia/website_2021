@@ -1,0 +1,9 @@
+@use '../custom' as *;
+
+.bg-color-blue {
+    background-color: $bg-color;
+}
+
+.bg-color-blue-light {
+    background-color: $bg-color-light;
+}

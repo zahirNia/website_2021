@@ -1,0 +1,134 @@
+@use '../custom' as *;
+
+body {
+    overflow-x: hidden;
+}
+
+nav {
+    .navbar-toggler {
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3Csvg height='50px' width='50px' fill='%23263238' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' viewBox='0 0 100 100' style='enable-background:new 0 0 100 100;' xml:space='preserve'%3E%3Cg%3E%3Cpath d='M81.4,13.5H18.7c-4.1,0-7.5,3.4-7.5,7.5s3.4,7.5,7.5,7.5h62.7c4.1,0,7.5-3.4,7.5-7.5S85.5,13.5,81.4,13.5z'%3E%3C/path%3E%3Cpath d='M18.7,57.5h32.7c4.1,0,7.5-3.4,7.5-7.5s-3.4-7.5-7.5-7.5H18.7c-4.1,0-7.5,3.4-7.5,7.5S14.6,57.5,18.7,57.5z'%3E%3C/path%3E%3Cpath d='M71.4,71.5H18.7c-4.1,0-7.5,3.4-7.5,7.5s3.4,7.5,7.5,7.5h52.7c4.1,0,7.5-3.4,7.5-7.5S75.5,71.5,71.4,71.5z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        &:not(.collapsed) {
+            .navbar-toggler-icon {
+                background-image: url("data:image/svg+xml,%3Csvg height='50px' fill='%23263238' viewBox='-100 -100 500 500' width='50px' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0'/%3E%3C/svg%3E");
+            }
+        }
+    }
+
+    .navbar-brand {
+        img {
+            height: 30px;
+        }
+    }
+
+    font-family: $font-family-sans-serif;
+    font-weight: 600;
+    background-color: $bg-color;
+
+    .nav-item {
+        a.nav-link {
+            color: $menu-color;
+            padding: 0.5rem 2rem 1.75rem;
+
+            &.active {
+                color: $menu-active-color;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        .navbar-collapse {
+            position: absolute;
+            top: 54px;
+            left: 100%;
+            padding: 15px;
+            width: 100%;
+            transition: all 0.4s ease;
+            display: block;
+            height: 100vh;
+        }
+        .navbar-collapse.collapsing {
+            height: auto !important;
+            margin-left: 50%;
+            left: 50%;
+            transition: all 0.2s ease;
+        }
+        .navbar-collapse.show {
+            left: 30%;
+            background-color: $menu-bg-color;
+        }
+
+        ul.navbar-nav {
+            width: 70%;
+        }
+
+        a.nav-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: $bg-color;
+            margin-bottom: 1rem;
+            padding: 1rem !important;
+            border-radius: 10px;
+
+            img {
+                margin-left: 2rem;
+                height: 14rem;
+                overflow: auto;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        .navbar-collapse.show {
+            left: 0%;
+        }
+        ul.navbar-nav {
+            width: 100%;
+        }
+        a.nav-link {
+            img {
+                height: 7rem;
+            }
+        }
+    }
+
+    @include media-breakpoint-only(md) {
+        height: 58px;
+        .navbar-brand {
+            margin-right: auto;
+
+            img {
+                position: relative;
+                top: 30px;
+            }
+        }
+
+        .nav-item {
+            .nav-link {
+                padding-left: 8.15rem !important;
+                padding-right: 7rem !important;
+            }
+        }
+        & > div {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            & a,
+            & .nav {
+                margin: 0 auto;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        &.navbar-expand-md .navbar-nav .nav-item .nav-link {
+            font-size: 1.375rem;
+            padding-left: 2.5rem;
+            padding-right: 2.5rem;
+        }
+    }
+}

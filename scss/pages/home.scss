@@ -1,0 +1,11 @@
+@use '../components/typography';
+@use '../components/utility';
+@use '../components/buttons';
+@use '../components/navbar';
+
+@use 'home/header';
+@use 'home/partner';
+@use 'home/benefits';
+@use 'home/steps';
+@use 'home/contact';
+@use '../components/footer';

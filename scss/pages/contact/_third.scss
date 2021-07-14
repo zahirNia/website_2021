@@ -1,0 +1,30 @@
+@use '../../custom' as *;
+@use '../../components/mixin' as *;
+
+#third {
+    .text {
+        // background-color: $bg-color-light;
+        text-align: center;
+        p {
+            text-align: center;
+            
+            @include media-breakpoint-up(md) {
+                text-align: start;
+            }
+        }
+        h3 {
+            text-align: center;
+            
+            @include media-breakpoint-up(md) {
+                text-align: start;
+            }
+        }
+        @include media-breakpoint-up(sm) {
+            text-align: start;
+        }
+    }
+
+    .form {
+        background-color: $bg-color;
+    }
+}

@@ -1,0 +1,36 @@
+$blue-color: #f9fbff;
+$blue-light-color: #fbfcfe;
+$blue-dark-color: #edf3fa;
+
+$primary: #3087DF;
+$secondary: #352917;
+$bg-color: $blue-color;
+$bg-color-light: $blue-light-color;
+$menu-bg-color: $blue-dark-color;
+
+$menu-color: #352917;
+$menu-active-color: #4989D8;
+$heading-color: #263238;
+$paragraph-color: #778AA3;
+
+// BORDER RADIUS OVERRIDES
+$border-radius: 0;
+$border-radius-sm: 0;
+$border-radius-lg: 0;
+$border-radius-pill: 0;
+
+//FONTS
+$font-family-sans-serif: "Nunito Sans", "Exo",system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$headings-font-family:  "Exo",system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$headings-font-weight: 700;
+
+//HR
+$hr-opacity: 1;
+
+// FORM CONTROLS
+$input-padding-y: 1rem;
+$input-padding-x: 1rem;
+$input-border-width: 0;
+
+// IMPORT BOOTSTRAP 5
+@import "../node_modules/bootstrap/scss/bootstrap.scss";

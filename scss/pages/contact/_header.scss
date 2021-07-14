@@ -1,0 +1,35 @@
+@use '../../custom' as *;
+@use '../../components/mixin' as *;
+
+header {
+    margin-top: 58px;
+    hr {
+        margin-top: -3px !important;
+
+        &.d-lg-block {
+            margin-top: -1px !important;
+        }
+
+        @include media-breakpoint-up(sm) {
+            position: absolute;
+            margin-bottom: -47px;
+        }
+        @include media-breakpoint-up(md) {
+            margin-bottom: -149px;
+        }
+        @include media-breakpoint-up(lg) {
+            margin-bottom: -268px;
+        }
+        @include media-breakpoint-up(xl) {
+            margin-bottom: -321px;
+        }
+        @include media-breakpoint-up(xxl) {
+            margin-bottom: -375px;
+        }
+    }
+    .text {
+        p {
+            text-align: start;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+@use '../components/typography';
+@use '../components/utility';
+@use '../components/buttons';
+@use '../components/navbar';
+
+@use 'contact/header';
+@use 'contact/first';
+@use 'contact/second';
+@use 'contact/third';
+@use 'contact/submit';
+@use '../components/footer';

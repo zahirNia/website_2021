@@ -1,0 +1,11 @@
+@use '../../custom' as *;
+@use '../../components/mixin' as *;
+
+#submit {
+    @include media-breakpoint-up(md) {
+        button.btn[type=submit]{
+            margin: 0 auto;
+            margin-right: 3rem;
+        }
+    }
+}
